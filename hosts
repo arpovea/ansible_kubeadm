@@ -1,5 +1,5 @@
 [Controladores]
-controlador ansible_ssh_host=192.168.50.2 ansible_ssh_private_key_file=~/Vagrant/ansible_kubeadm/.vagrant/machines/Controlador/virtualbox/private_key 
+controlador ansible_ssh_host=192.168.50.2 ansible_ssh_private_key_file=~/GitHub/ansible_kubeadm/.vagrant/machines/Controlador/libvirt/private_key 
 [Workers]
-worker1 ansible_ssh_host=192.168.50.3 ansible_ssh_private_key_file=~/Vagrant/ansible_kubeadm/.vagrant/machines/Worker1/virtualbox/private_key 
-worker2 ansible_ssh_host=192.168.50.4 ansible_ssh_private_key_file=~/Vagrant/ansible_kubeadm/.vagrant/machines/Worker2/virtualbox/private_key 
+worker1 ansible_ssh_host=192.168.50.3 ansible_ssh_private_key_file=~/GitHub/ansible_kubeadm/.vagrant/machines/Worker1/libvirt/private_key 
+worker2 ansible_ssh_host=192.168.50.4 ansible_ssh_private_key_file=~/GitHub/ansible_kubeadm/.vagrant/machines/Worker2/libvirt/private_key 
