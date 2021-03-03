@@ -3,8 +3,8 @@
 
 - name: install APT Transport HTTPS
   apt:
-   name: apt-transport-https
-   state: present
+    name: apt-transport-https
+    state: present
 
 - name: add Kubernetes apt-key
   apt_key:
@@ -13,17 +13,17 @@
 
 - name: add Kubernetes' APT repository
   apt_repository:
-   repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
-   state: present
-   filename: 'kubernetes'
+    repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
+    state: present
+    filename: 'kubernetes'
 
 - name: install kubelet
   apt:
-   name: kubelet
-   state: present
-   update_cache: true
+    name: kubelet
+    state: present
+    update_cache: true
 
 - name: install kubeadm
   apt:
-   name: kubeadm
-   state: present
+    name: kubeadm
+    state: present
