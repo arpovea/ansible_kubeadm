@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
       controlador.vm.synced_folder '.', '/vagrant', disabled: true  
       controlador.vm.network "private_network", ip: "192.168.50.2"
       controlador.vm.provider :virtualbox
-      controlador.vm.box = "debian/buster64"
+      controlador.vm.box = "generic/debian10"
       controlador.vm.hostname = "Controlador"
   end
 
@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
 	  worker1.vm.synced_folder '.', '/vagrant', disabled: true
       worker1.vm.network "private_network", ip: "192.168.50.3"
       worker1.vm.provider :virtualbox
-      worker1.vm.box = "debian/buster64"
+      worker1.vm.box = "generic/debian10"
       worker1.vm.hostname = "Worker1"
 
   end
@@ -47,7 +47,7 @@ Vagrant.configure("2") do |config|
       worker2.vm.synced_folder '.', '/vagrant', disabled: true
       worker2.vm.network "private_network", ip: "192.168.50.4"
       worker2.vm.provider :virtualbox
-      worker2.vm.box = "debian/buster64"
+      worker2.vm.box = "generic/debian10"
       worker2.vm.hostname = "Worker2"
 
   end
