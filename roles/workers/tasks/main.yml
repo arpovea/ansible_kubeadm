@@ -1,5 +1,5 @@
 
-- name: join cluster
+- name: Ejecutando el Token para agregar los worker al Cluster
   shell: "{{ hostvars['controlador'].join_command }} >> node_joined.txt"
   args:
     chdir: $HOME
