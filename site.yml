@@ -1,14 +1,14 @@
 - hosts: all
   become: true
   roles:
-   - role: commons
+   - commons
 
 - hosts: Controladores
   become: true
   roles:
-   - role: controlador
+   - controlador
 
 - hosts: Workers
   become: true
   roles:
-   - role: workers
+   - workers
