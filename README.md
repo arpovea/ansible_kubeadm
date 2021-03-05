@@ -30,4 +30,4 @@ Este rol se ejecuta en todas las máquinas, aseguramos que todas las máquinas e
 
 * Kubeadm: Instalará y configurará los distintos componentes de un clúster de forma estándar.
 
-* Kubelet: Servicio que se ejecuta en todos los nodos y gestiona operaciones a nivel de nodo. 
+* Kubelet: Servicio que se ejecuta en todos los nodos y gestiona operaciones a nivel de nodo.
