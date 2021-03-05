@@ -78,4 +78,4 @@ Para escalar letschat:
 
 Probar letschat:
 
-curl 192.168.50.2:[PUERTOASIGNADO]
+`curl 192.168.50.2:[PUERTOASIGNADO]`
