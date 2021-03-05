@@ -52,3 +52,30 @@ En algunas plays de los distintos roles podéis observar que se realizan distint
 En esta tarea se ha utilizado la autenticación para kubectl de admin/root para no alargar mas la práctica, pero si quieres saber como generar configuraciones para que otros usuarios puedan acceder a tu cluster desde otras máquinas:
 
 https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
+
+### Ejemplo de despligue de una aplicación
+
+Para este pequeño ejemplo se va a utilizar:
+
+https://github.com/iesgn/kubernetes-storm/tree/master/unidad3/ejemplos-3.2/ejemplo8
+
+Desplegamos la aplicación (estando en el directorio ejemplo8):
+
+`kubectl apply -f .`
+
+Para ver que todo funciona correctamente realizamos:
+
+`kubectl get all`
+
+Para ver el ingress:
+
+`kubectl get ingress`
+`kubectl describe ingress`
+
+Para escalar letschat:
+
+`kubectl scale deployment letschat --replicas=4`
+
+Probar letschat:
+
+curl 192.168.50.2:[PUERTOASIGNADO]
