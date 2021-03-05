@@ -24,10 +24,10 @@ En este apartado repasaremos los puntos mas importantes o pequeños detalles en 
 
 Rol commons:
 
-Este rol se ejecuta en todas las máquinas, con este aseguramos que todas las máquinas esten actualizadas, tengan la swap desactivada (Kubernetes no funciona con swap) e instalamos paquetes comunes y necesarios en todas las máquinas, lo mas importantes:
+Este rol se ejecuta en todas las máquinas, aseguramos que todas las máquinas esten actualizadas, tengan la swap desactivada (Kubernetes no funciona con swap) y que tengan los paquetes necesarios para el despligue en todas ellas, los mas importantes:
 
-* Docker
+* Docker: Es el componente que ejecuta los contenedores.
 
-* Kubelet
+* Kubeadm: Instalará y configurará los distintos componentes de un clúster de forma estándar.
 
-* Kubeadm
+* Kubelet: Servicio que se ejecuta en todos los nodos y gestiona operaciones a nivel de nodo. 
