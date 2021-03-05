@@ -47,4 +47,8 @@ Este rol es muy simple, ya que únicamente ejecutamos la variable que se ha crea
 
 #### Notas finales
 
-En algunas plays de los distintos roles podeis observar que se realizan distintas redirecciones a ficheros, esto simplemente es para que no se pierda dicha información ya que nos puede ser útil para distintas tareas.
+En algunas plays de los distintos roles podéis observar que se realizan distintas redirecciones a ficheros, esto simplemente es para que no se pierda dicha información ya que nos puede ser útil para distintas tareas.
+
+En esta tarea se ha utilizado la autenticación para kubectl de admin/root para no alargar mas la práctica, pero si quieres saber como generar configuraciones para que otros usuarios puedan acceder a tu cluster desde otras máquinas:
+
+https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
