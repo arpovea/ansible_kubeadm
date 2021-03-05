@@ -43,4 +43,8 @@ Una vez realizado esto se va a desplegar Flannel, que sera el encargado de la su
 
 **Rol "workers":**
 
-Este rol es muy simple, ya que unicamente ejecutamos la variable que se ha creado en el rol "controlador" para añadir los workers al cluster
+Este rol es muy simple, ya que únicamente ejecutamos la variable que se ha creado en el rol "controlador" para añadir los workers al cluster
+
+#### Notas finales
+
+En algunas plays de los distintos roles podeis observar que se realizan distintas redirecciones a ficheros, esto simplemente es para que no se pierda dicha información ya que nos puede ser útil para distintas tareas.
