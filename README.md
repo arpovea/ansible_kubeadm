@@ -22,7 +22,7 @@ En este apartado repasaremos los puntos mas importantes o pequeños detalles en 
 
 ### Roles
 
-Rol commons:
+*Rol "commons":*
 
 Este rol se ejecuta en todas las máquinas, aseguramos que todas las máquinas esten actualizadas, tengan la swap desactivada (Kubernetes no funciona con swap) y que tengan los paquetes necesarios para el despligue en todas ellas, los mas importantes:
 
@@ -31,3 +31,16 @@ Este rol se ejecuta en todas las máquinas, aseguramos que todas las máquinas e
 * Kubeadm: Instalará y configurará los distintos componentes de un clúster de forma estándar.
 
 * Kubelet: Servicio que se ejecuta en todos los nodos y gestiona operaciones a nivel de nodo.
+
+*Rol "controlador":*
+
+Este rol se ejecuta en la máquina que será nuestro nodo controlador, instalamos el paquete `kubectl`, iniciamos el cluster (indicandole la subred que se va utilizar para los distintos "pods" en este caso coincide con la de Flannel) después se crea el directorio ".kube" y se copia el fichero "config" dentro de este para la configuración de `kubectl`. 
+Una vez realizado esto se va a desplegar Flannel, que sera el encargado de la subred de los "pods", Por último se genera un "token" para que los "workers" se puedan agregar al cluster, este se mete en una variable de ansible para utilizarla posteriormente en los "workers" (para hacer uso de esta variable es necesario que en el fichero `ansible.cfg` agregemos el siguiente valor: `gather_facts=false`)
+
+* Kubectl: se utiliza para emitir comandos al clúster a través de su servidor API.
+
+* Flannel: es una red superpuesta muy simple que satisface los requisitos de Kubernetes. Mucha gente ha informado del éxito con Flannel y Kubernetes
+
+*Rol "workers":*
+
+Este rol es muy simple, ya que unicamente ejecutamos la variable que se ha creado en el rol "controlador" para añadir los workers al cluster
